@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Management Dashboard</h1>
+        <form id="student-form">
+            <input type="hidden" id="edit-index">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="text" id="regno" placeholder="Reg No" required>
+            <input type="text" id="dept" placeholder="Department" required>
+            <input type="number" id="year" placeholder="Year" min="1" max="5" required>
+            <input type="number" id="marks" placeholder="Marks" min="0" max="100" required>
+            <button type="submit">Add Student</button>
+            <button type="button" id="cancel-edit" style="display:none;">Cancel</button>
+        </form>
+        <input type="text" id="search" placeholder="Search by name or reg no..." class="search-bar">
+        <table id="student-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Reg No</th>
+                    <th>Dept</th>
+                    <th>Year</th>
+                    <th>Marks</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Student records will appear here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
